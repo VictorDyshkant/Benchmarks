@@ -15,18 +15,12 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
-        
-    - name: Restore dependencies
-      run: dotnet restore
       
     - name: Build
-      run: dotnet build -c Release --no-restore
+      run: dotnet build -c Release
       
     - name: Test
-      run: dotnet test
-      
-    - name: Testh
-      run: dir
+      run: dotnet test -c Release
     
     - name: Upload test artifacts
       uses: actions/upload-artifact@v2
