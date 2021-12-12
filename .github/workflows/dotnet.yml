@@ -26,7 +26,10 @@ jobs:
       run: dotnet test
       
     - name: Testh
-      run: dir
+      run: | 
+             dir
+             cd BenchmarkTests/bin/Release/net5.0/BenchmarkDotNet.Artifacts/results
+             dir
     
     - name: Upload test artifacts
       uses: actions/upload-artifact@v2
