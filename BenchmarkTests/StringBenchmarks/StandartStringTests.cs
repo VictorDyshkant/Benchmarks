@@ -9,7 +9,7 @@ namespace BenchmarkTests.StringBenchmarks
         [Fact]
         public void TestBenchMarks()
         {
-            BenchmarkRunner.Run<StandartString>();
+            //BenchmarkRunner.Run<StandartString>();
         }
     }
 }
