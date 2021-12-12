@@ -24,6 +24,9 @@ jobs:
       
     - name: Test
       run: dotnet test
+      
+    - name: Testh
+      run: dir
     
     - name: Upload test artifacts
       uses: actions/upload-artifact@v2
