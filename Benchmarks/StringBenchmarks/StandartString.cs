@@ -1,12 +1,15 @@
 ﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Jobs;
 
 namespace Benchmarks.StringBenchmarks
 {
     [MemoryDiagnoser]
-    public class SimpleString
+    [SimpleJob(RuntimeMoniker.Net461)]
+    [SimpleJob(RuntimeMoniker.Net50)]
+    public class StandartString
     {
-        [Params(100, 1000, 10000)]
-        public int Count;
+        //[Params(100, 1000, 10000)]
+        public int Count = 10;
 
         [Benchmark]
         public void StringConcatination()

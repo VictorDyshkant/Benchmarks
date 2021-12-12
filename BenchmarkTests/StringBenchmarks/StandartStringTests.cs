@@ -1,16 +1,15 @@
 ﻿using BenchmarkDotNet.Running;
 using Benchmarks.StringBenchmarks;
-using System;
+using Xunit;
 
-namespace Benchmarks
+namespace BenchmarkTests.StringBenchmarks
 {
-    public class Program
+    public class StandartStringTests
     {
-        public static void Main(string[] args)
+        [Fact]
+        public void TestBenchMarks()
         {
             BenchmarkRunner.Run<StandartString>();
-            
-            Console.ReadKey();
         }
     }
 }

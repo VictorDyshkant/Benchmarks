@@ -1,10 +1,13 @@
 ﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Jobs;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Benchmarks.ParallelBenchmarks
 {
+    [SimpleJob(RuntimeMoniker.Net461)]
+    [SimpleJob(RuntimeMoniker.Net50)]
     public class ParallelExecutionWithoutCalculation
     {
         [Params(100, 250, 500)]

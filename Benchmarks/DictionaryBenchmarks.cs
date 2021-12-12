@@ -1,10 +1,13 @@
 ﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Jobs;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 
 namespace Benchmarks
 {
     [MemoryDiagnoser]
+    [SimpleJob(RuntimeMoniker.Net461)]
+    [SimpleJob(RuntimeMoniker.Net50)]
     public class DictionaryBenchmarks
     {
         [Params(100, 1000, 10000)]

@@ -1,9 +1,12 @@
 ﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Jobs;
 using System.Text;
 
 namespace Benchmarks.StringBenchmarks
 {
     [MemoryDiagnoser]
+    [SimpleJob(RuntimeMoniker.Net461)]
+    [SimpleJob(RuntimeMoniker.Net50)]
     public class StringBuilderWithoutAdditionalMemoryAllocation
     {
         [Params(100, 1000, 10000)]

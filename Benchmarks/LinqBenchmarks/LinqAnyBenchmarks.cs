@@ -1,9 +1,12 @@
 ﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Jobs;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Benchmarks.Linq
+namespace Benchmarks.LinqBenchmarks
 {
+    [SimpleJob(RuntimeMoniker.Net461)]
+    [SimpleJob(RuntimeMoniker.Net50)]
     public class LinqAnyBenchmarks
     {
         public static IEnumerable<int> list = Enumerable.Range(0, 100).ToList();
