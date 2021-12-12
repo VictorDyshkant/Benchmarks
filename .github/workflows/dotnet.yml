@@ -24,3 +24,9 @@ jobs:
       
     - name: Test
       run: dotnet test
+    
+    - name: Upload test artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: .TestsResults
+        path: BenchmarkTests/bin/Release/net5.0/BenchmarkDotNet.Artifacts/results
