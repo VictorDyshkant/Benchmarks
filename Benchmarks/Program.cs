@@ -8,7 +8,7 @@ namespace Benchmarks
     {
         public static void Main(string[] args)
         {
-            BenchmarkRunner.Run<StandartString>();
+            //BenchmarkRunner.Run<StandartString>();
             
             Console.ReadKey();
         }

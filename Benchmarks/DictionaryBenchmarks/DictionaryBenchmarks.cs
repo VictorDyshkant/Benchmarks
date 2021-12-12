@@ -3,12 +3,12 @@ using BenchmarkDotNet.Jobs;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 
-namespace Benchmarks
+namespace Benchmarks.DictionaryBenchmarks
 {
     [MemoryDiagnoser]
     [SimpleJob(RuntimeMoniker.Net461)]
     [SimpleJob(RuntimeMoniker.Net50)]
-    public class DictionaryBenchmarks
+    public class DictionaryAndConcurrentBenchmarks
     {
         [Params(100, 1000, 10000)]
         public int Count;

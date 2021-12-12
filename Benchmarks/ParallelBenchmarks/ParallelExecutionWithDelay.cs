@@ -8,7 +8,7 @@ namespace Benchmarks.ParallelBenchmarks
 {
     [SimpleJob(RuntimeMoniker.Net461)]
     [SimpleJob(RuntimeMoniker.Net50)]
-    public class ParallelWithDelay
+    public class ParallelExecutionWithDelay
     {
         [Params(100, 250, 500)]
         public static int N;
