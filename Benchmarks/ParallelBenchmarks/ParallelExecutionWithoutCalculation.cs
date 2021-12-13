@@ -51,7 +51,6 @@ namespace Benchmarks.ParallelBenchmarks
             {
                 for (int y = 0; y < _initialData[i].Length; y++)
                 {
-                    Thread.Sleep(1);
                     counter += _initialData[i][y];
                 }
             }
